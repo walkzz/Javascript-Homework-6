@@ -19,8 +19,15 @@
         <li>Audi</li>
     </ul>
     <script>
-        const list = document.querySelectorAll("li");
-        list.forEach((index) => index.style.color = "blue");
+        const list = document.querySelector("ul");
+        list.querySelectorAll("li").forEach((index) => {
+            index.style.color = "blue";
+        });
+        let newItem = document.createElement("li");
+        let contentItem = document.createTextNode("Ferrari");
+        newItem.appendChild(contentItem);
+        list.appendChild(newItem);
+        newItem.style.color = "blue"; // Ferrari color
     </script>
 </body>
 
