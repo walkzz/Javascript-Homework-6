@@ -33,6 +33,28 @@
         <li>The Hobbit</li>
         <li>Harry Potter and the Sorcerer's Stone</li>
     </ol>
+    <script>
+        function oddListItems() {
+            const listItems = document.querySelectorAll("#book-list li");
+            listItems.forEach((item, index) => {
+                if (index % 2 === 0) {
+                    item.style.backgroundColor = "lightblue";
+                }
+            });
+        }
+        function changeBookTitle(orderedList, oldTitle, newTitle) {
+            const listItems = orderedList.querySelectorAll("li");
+            listItems.forEach((item) => {
+                if (item.textContent === oldTitle) {
+                    item.textContent = newTitle;
+                }
+            });
+        }
+        // calling functions
+        oddListItems();
+        const bookList = document.getElementById("book-list");
+        changeBookTitle(bookList, "Lord of the Flies", "The Alchemist");
+    </script>
 </body>
 
 </html>
