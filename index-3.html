@@ -53,12 +53,10 @@
                 const questionDiv = document.createElement('div');
                 questionDiv.classList.add('quiz-question');
 
-                // Create and append the question text
                 const questionText = document.createElement('p');
                 questionText.textContent = `${index + 1}. ${q.question}`;
                 questionDiv.appendChild(questionText);
 
-                // Create and append the options as radio buttons
                 q.options.forEach(option => {
                     const label = document.createElement('label');
                     const input = document.createElement('input');
@@ -68,7 +66,6 @@
                     label.appendChild(input);
                     label.appendChild(document.createTextNode(option));
                     questionDiv.appendChild(label);
-                    questionDiv.appendChild(document.createElement('br'));
                 });
 
                 // Append the question div to the quiz container
