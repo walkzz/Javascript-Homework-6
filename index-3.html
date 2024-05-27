@@ -51,7 +51,6 @@
 
             quizData.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
-                questionDiv.classList.add('quiz-question');
 
                 const questionText = document.createElement('p');
                 questionText.textContent = `${index + 1}. ${q.question}`;
@@ -70,9 +69,7 @@
                 quizContainer.appendChild(questionDiv);
             });
         }
-        window.onload = function() {
             generateQuiz(quizData);
-        };
     </script>
   </body>
 </html>
